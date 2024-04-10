@@ -9,6 +9,7 @@ import re
 import urllib.parse
 
 import requests
+import brotli
 
 
 BASE_URL = "https://api.fanbox.cc/"
