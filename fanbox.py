@@ -161,7 +161,7 @@ class Post(Session):
         for i in range(limit):
             self._log( "投稿データ一覧を取得中...(%d/%d件)" % (i+1, limit) )
             param = self.__query_parse(paginate["body"][i])
-            posts += self.get_listCreator(**param)["body"]["items"]
+            posts += self.get_listCreator(**param)["body"]
             sleep(WAIT_TIME/3)
         return posts
 
